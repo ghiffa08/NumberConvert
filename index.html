@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HaiNumConvert - Konversi Bilangan</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-lg mx-auto bg-white shadow-md rounded-t-lg p-6">
+      <h1 class="text-2xl font-bold mb-4">Konversi Bilangan</h1>
+      <form id="convertForm" class="space-y-4">
+        <div>
+          <label for="number" class="block text-sm font-medium"
+            >Masukkan Bilangan:</label
+          >
+          <input
+            type="text"
+            id="number"
+            name="number"
+            class="w-full p-2 border rounded"
+          />
+          <p id="number-error" class="text-red-500 text-xs mt-1 hidden"></p>
+        </div>
+        <div class="flex items-center">
+          <label for="conversion" class="block text-sm font-medium"
+            >Jenis Konversi:</label
+          >
+          <select
+            id="conversion"
+            name="conversion"
+            class="w-full p-2 border rounded ml-2"
+          >
+            <option value="decimal-to-binary">Decimal ke Binary</option>
+            <option value="binary-to-decimal">Binary ke Decimal</option>
+            <option value="decimal-to-hex">Decimal ke Hexadecimal</option>
+            <option value="hex-to-decimal">Hexadecimal ke Decimal</option>
+            <option value="decimal-to-octal">Decimal ke Octal</option>
+            <option value="octal-to-decimal">Octal ke Decimal</option>
+          </select>
+          <button
+            type="button"
+            id="swapBtn"
+            class="px-4 py-2 ml-4 bg-yellow-500 text-white rounded"
+          >
+            Swap
+          </button>
+        </div>
+        <button
+          type="button"
+          id="convertBtn"
+          class="px-4 py-2 bg-blue-500 text-white rounded"
+        >
+          Konversi
+        </button>
+      </form>
+      <div id="result" class="mt-6 p-4 bg-gray-50 border rounded hidden">
+        <h2 class="text-lg font-bold">Hasil Konversi</h2>
+        <p id="output" class="text-sm"></p>
+        <div id="steps" class="mt-2 text-sm"></div>
+      </div>
+    </div>
+    <!-- Card Footer -->
+    <div class="max-w-lg mx-auto bg-gray-200 py-4 rounded-b-lg">
+      <p class="text-xs text-gray-600 text-center">
+        © Dibuat oleh
+        <a
+          href="https://www.instagram.com/haikaljibrn__/"
+          class="text-blue-500 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Haikal Jibran Al-Ghiffarry </a
+        >. Semoga membantu :)
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
